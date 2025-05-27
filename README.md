@@ -32,7 +32,6 @@ Users should be able to:
 
 ### Screenshot
 
-![Solution Preview](solution%20images/desktop%20screenshot.png)
 ![Solution Preview](solution%20images/desktop%20screenshot%20active.png)
 ![Solution Preview](solution%20images/desktop%20step%20two%20monthly.png)
 ![Solution Preview](solution%20images/desktop%20step%20two%20yearly.png)
