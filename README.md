@@ -32,12 +32,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Solution Preview](solution%20images/desktop%20screenshot%20active.png)
+![Solution Preview](solution%20images/desktop%20active.png)
 ![Solution Preview](solution%20images/desktop%20step%20two%20monthly.png)
 ![Solution Preview](solution%20images/desktop%20step%20two%20yearly.png)
 ![Solution Preview](solution%20images/desktop%20step%20three%20monthly.png)
 ![Solution Preview](solution%20images/desktop%20step%20three%20yearly.png)
-![Solution Preview](solution%20images/desktop%20step%20four%20monthly.png)
 ![Solution Preview](solution%20images/desktop%20step%20four%20yearly.png)
 ![Solution Preview](solution%20images/desktop%20confirm%20message.png)
 ![Solution Preview](solution%20images/mobile%20page%20one.png)
