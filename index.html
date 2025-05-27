@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+
+    <div class="container">
+
+      <aside class="sidebar">
+        <div class="steps" aria-label="Form steps navigation"><span class="steps-num active">1</span><span class="steps-indicator">Step 1<p>Your info</p>
+        </span></div>
+        <div class="steps" aria-label="Form steps navigation"><span class="steps-num">2</span><span class="steps-indicator">Step 2<p>Select plan</p>
+        </span></div>
+        <div class="steps" aria-label="Form steps navigation"><span class="steps-num">3</span><span class="steps-indicator">Step 3<p>Add ons</p>
+        </span></div>
+        <div class="steps" aria-label="Form steps navigation"><span class="steps-num">4</span><span class="steps-indicator">Step 4<p>Summary</p>
+        </span></div>
+      </aside>
+      <section class="step1 content">
+        <header>
+          <h1 class="content-header">Personal info</h1>
+          <p class="head-p">Please provide your name, email address, and phone number.</p>
+        </header>
+
+        <form action="#" class="form">
+          <label for="username">Name <span class="labelspan"></span></label>
+          <input class="inputs" required id="username" type="text" placeholder="e.g. Stephen King">
+          <label for="email">Email Address <span class="labelspan"></span></label>
+          <input class="inputs" id="email" required type="email" placeholder="e.g. stephenking@lorem.com">
+          <label for="phone">Phone Number <span class="labelspan"></span></label>
+          <input class="inputs" required id="phone" type="tel" placeholder="e.g. +1 234 567 890"
+           pattern="^\+?\d[\d\s]{7,}$" title="Enter a valid phone number (only digits, spaces, and optional +)">
+        </form>
+
+        <nav class="steps-nav" aria-label="Step Navigation">
+          <button class="prev-btn not-visible">Go Back</button>
+          <button  class="next-btn">Next Step</button>
+        </nav>
+      </section>
+
+      <section class="step2 content no-display">
+        
+        <header>
+          <h1 class="content-header">Select your plan</h1>
+          <p class="head-p">You have the option of monthly or yearly billing.</p>
+        </header>
+        <form class="billing-form">
+          <div class="billing-flex">
+            <label class="lab mr selected-plan" for="Arcade">
+              <img src="./assets/images/icon-arcade.svg" alt="Arcade plan icon">
+              <div class="plan-description">
+                <h3>Arcade</h3>
+                <p class="plan-price">$9/mo</p>
+                <p class="plan-extra no-display">2 months free</p>
+              </div>
+            </label>
+            <input class="no-display plan-inputs" value="$9/mo" type="radio" aria-label="Arcade Plan" name="billingplan" checked id="Arcade">
+            <label class="lab mr" for="Advanced">
+              <img src="./assets/images/icon-advanced.svg" alt="Advanced plan icon">
+              <div class="plan-description">
+                <h3>Advance</h3>
+                <p class="plan-price">$12/mo</p>
+                <p class="plan-extra no-display">2 months free</p>
+              </div>
+            </label>
+            <input class="no-display plan-inputs" value="$12/mo" type="radio" aria-label="Advanced Plan" name="billingplan" id="Advanced">
+            <label class="lab" for="Pro">
+              <img src="./assets/images/icon-pro.svg" alt="Pro plan icon">
+              <div class="plan-description">
+                <h3>Pro</h3>
+                <p class="plan-price">$15/mo</p>
+                <p class="plan-extra no-display">2 months free</p>
+              </div>
+            </label>
+            <input class="no-display plan-inputs" value="$15/mo" type="radio" aria-label="Pro Plan" name="billingplan" id="Pro">
+          </div>
+        </form>
+
+        <p class="plan-toggle">
+          <label class="mr" for="monthly">Monthly</label>
+          <span class="toggle-display mr">
+            <input class="togg" type="radio" id="monthly">
+            <span class="toggle shift-l"></span>
+            <input class="togg" type="radio" id="yearly">
+          </span>
+          <label for="yearly">Yearly</label>
+        </p>
+
+        <nav class="steps-nav" aria-label="Step Navigation">
+          <button class="prev-btn">Go Back</button>
+          <button class="next-btn">Next Step</button>
+        </nav>
+      </section>
+
+      <section class="step3 content no-display">
+        <header>
+          <h1 class="content-header">
+            Pick add-ons
+            </h1>
+          <p class="head-p">
+            Add-ons help enhance your gaming experience.
+          </p>
+        </header>
+
+        <div class="add-ons">
+          <ul>
+            <li class="list-items mb">
+              <span class="li-inputs">
+                <input class="ols" id="amg-addon" value="$1/mo" aria-label="Online services add-on" name="Online services" type="checkbox">
+                <label class="addon-labels" for="amg-addon">
+                  <dl>
+                    <dt class="add-on-dt">
+                      Online services
+                    </dt>
+                    <dd class="add-on-dd">
+                      Access to multiplayers games
+                    </dd>
+                  </dl>
+                </label>
+              </span>
+      
+              <span class="addon-price">
+                +$1/mo
+              </span>
+            </li>
+            <li class="list-items mb">
+              <span class="li-inputs">
+                <input class="ols" id="ls-addon" value="$2/mo" aria-label="Local Storage add-on" name="Local Storage" type="checkbox">
+                <label class="addon-labels" for="ls-addon">
+                  <dl>
+                    <dt class="add-on-dt">
+                      Local Storage
+                    </dt>
+                    <dd class="add-on-dd">
+                      Extra 1TB of cloud save
+                    </dd>
+                  </dl>
+                </label>
+              </span>
+
+              <span class="addon-price">
+                +$2/mo
+              </span>
+            </li>
+            <li class="list-items">
+              <span class="li-inputs">
+                <input class="ols" id="cp-addon" value="$2/mo" aria-label="Customizable Profile add-on" name="Customizable Profile" type="checkbox">
+                <label class="addon-labels" for="cp-addon">
+                  <dl>
+                    <dt class="add-on-dt">
+                      Customizable profile
+                    </dt>
+                    <dd class="add-on-dd">
+                      Custom theme on your profile
+                    </dd>
+                  </dl>
+                </label>
+              </span>
+
+              <span class="addon-price">
+                +$2/mo
+              </span>
+            </li>
+          </ul>
+        </div>
+        
+        <nav class="steps-nav" aria-label="Step Navigation">
+          <button class="prev-btn">Go Back</button>
+          <button class="next-btn">Next Step</button>
+        </nav>
+      </section>
+
+      <section class="step4 content no-display">
+        <header>
+          <h1 class="content-header">
+            Finishing up
+            </h1>
+          <p class="head-p">
+            Double-check everything looks OK before confirming.
+          </p>
+        </header>
+
+        <div class="summary">
+          <ul class="summary-list">
+            <li class="summary-list-item">
+              <span class="topspan">
+                <h3 class="summary-list-itemhead">
+                </h3>
+                <p class="summary-list-itemp"><a onclick="switchToStep2()">change</a></p>
+              </span>
+              <span class="second-topspan">
+              </span>
+            </li><hr>
+            <li class="summary-list-item">
+              <span class="mid-span1">
+              </span>
+              <span class="mid-span2">
+              </span>
+            </li>
+            <li class="summary-list-item">
+              <span class="mid-span1">
+              </span>
+              <span class="mid-span2">
+              </span>
+            </li>
+            <li class="summary-list-item">
+              <span class="mid-span1">
+              </span>
+              <span class="mid-span2">
+              </span>
+            </li>
+          </ul>
+        </div>
+        
+          <p class="total">
+            <span class="total-span1"></span>
+            <span class="total-span2"></span>
+          </p>
+
+        <nav class="steps-nav" aria-label="Step Navigation">
+          <button class="prev-btn">Go Back</button>
+          <button class="next-btn">Confirm</button>
+        </nav>
+      </section>
+
+      <section class="step5 content no-display">
+        <header>
+          <img src="./assets/images/icon-thank-you.svg" alt="Successful checkmark">
+          <h1 class="content-header">
+            Thank you!
+            </h1>
+          <p class="head-p">
+            Thanks for confirming your subscription! We 
+            hope you have fun using our platform. If you 
+            ever need support, please feel free to email 
+            us at support@loremgaming.com.
+          </p>
+        </header>
+      </section>
+    
+    </div>
+
+  </main>
+  <nav class="outside-nav" aria-label="Mobile Steps Navigation">
+    <button class="prev-btn">Go Back</button>
+    <button class="confirm-btn out next-btn">Next Step</button>
+  </nav>
+  <footer class="attribution" aria-label="Attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
